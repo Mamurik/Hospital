@@ -28,7 +28,6 @@ Hospital — это приложение для управления больн�
 2. Перейдите в директорию hospital_project:
    ```bash
    cd hospital_project
-   pip install -r requirements.txt
    python manage.py runserver
 
 ###Использование
