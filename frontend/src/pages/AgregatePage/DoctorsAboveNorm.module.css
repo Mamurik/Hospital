@@ -1,0 +1,39 @@
+/* DoctorsAboveNorm.module.css */
+
+.container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 16px;
+  }
+  
+  .list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .listItem {
+    padding: 8px 0;
+    font-size: 18px;
+    color: #555;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .loading,
+  .error {
+    font-size: 18px;
+    color: #ff4d4f;
+    padding: 10px;
+    background-color: #fff1f0;
+    border: 1px solid #ffa39e;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+  

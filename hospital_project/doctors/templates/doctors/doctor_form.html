@@ -1,0 +1,11 @@
+<!-- templates/doctors/doctor_form.html -->
+{% extends "base_generic.html" %} {% block content %}
+<h1>
+  {% if object %}Редактировать доктора{% else %}Создать доктора{% endif %}
+</h1>
+<form method="post">
+  {% csrf_token %} {{ form.as_p }}
+  <button type="submit">Сохранить</button>
+</form>
+<a href="{% url 'doctor-list' %}">Назад к списку докторов</a>
+{% endblock %}

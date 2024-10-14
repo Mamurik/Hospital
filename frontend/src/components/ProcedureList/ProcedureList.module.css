@@ -1,0 +1,75 @@
+.container {
+    padding: 20px;
+}
+
+.title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.createButton {
+    padding: 10px 15px;
+    background-color: #4CAF50; /* Green */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.createButton:hover {
+    background-color: #45a049; /* Darker green */
+}
+
+.procedureList {
+    list-style-type: none;
+    padding: 0;
+}
+
+.procedureItem {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.editButton, .deleteButton {
+    padding: 5px 10px;
+    margin-left: 5px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.editButton {
+    background-color: #2196F3; /* Blue */
+    color: white;
+}
+
+.editButton:hover {
+    background-color: #0b7dda; /* Darker blue */
+}
+
+.deleteButton {
+    background-color: #f44336; /* Red */
+    color: white;
+}
+
+.deleteButton:hover {
+    background-color: #da190b; /* Darker red */
+}
+
+.noProcedures {
+    font-style: italic;
+    color: #888;
+}
+
+.loading {
+    text-align: center;
+}
+
+.error {
+    color: red;
+    text-align: center;
+}

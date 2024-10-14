@@ -1,0 +1,67 @@
+import React, { useEffect, useState } from "react";
+import IPatient from "../../interfaces/IPatient";
+import axios from "axios";
+import IProcedure from "../../interfaces/IProcedure";
+
+const Dashboard: React.FC = () => {
+  const [patients, setPatients] = useState<IPatient[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const [currentPatient, setCurrentPatient] = useState<IPatient | null>(null);
+
+  useEffect(() => {
+    const fetchPatients = async () => {
+      try {
+        const response = await axios.get("http://localhost:8000/api/patients/");
+        setPatients(response.data);
+      } catch (err) {
+        console.error("Ошибка при загрузке пациентов:", err);
+        setError("Ошибка при загрузке пациентов");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchPatients();
+  }, []);
+
+  useEffect(() => {
+    if (patients.length > 0) {
+      const foundPatient = patients.find((patient) => patient.name === "123");
+      if (foundPatient) {
+        setCurrentPatient(foundPatient);
+      } else {
+        console.log("Таких нету");
+      }
+    }
+  }, [patients]);
+
+  if (loading) {
+    return <div>Загрузка...</div>;
+  }
+
+  if (error) {
+    return <div>{error}</div>;
+  }
+
+  return (
+    <div>
+      <h2>Личный кабинет пациента</h2>
+      {currentPatient ? (
+        <div>
+          <h2>Пациент:{currentPatient.name}</h2>
+          <h1>
+            Список процедур:
+            {currentPatient.procedures.map((procedure: IProcedure) => {
+              return <p key={procedure.id}>{procedure.name}</p>;
+            })}
+          </h1>
+        </div>
+      ) : (
+        <div>Пациент не найден</div>
+      )}
+    </div>
+  );
+};
+
+export default Dashboard;

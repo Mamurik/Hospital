@@ -1,0 +1,53 @@
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    width: 300px; /* Adjust as needed */
+}
+
+.modal h2 {
+    margin: 0 0 15px;
+}
+
+.modal label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.modal input,
+.modal select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+.modal button {
+    padding: 10px;
+    background-color: #4CAF50; /* Green */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.modal button:hover {
+    background-color: #45a049; /* Darker green */
+}
+
+.modal .cancelButton {
+    background-color: #f44336; /* Red */
+}
+
+.modal .cancelButton:hover {
+    background-color: #da190b; /* Darker red */
+}

@@ -1,0 +1,35 @@
+/* src/pages/MainPage.module.css */
+.mainPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+  }
+  
+  .title {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .navList {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .navItem {
+    margin: 10px 0;
+  }
+  
+  .navLink {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 18px;
+  }
+  
+  .navLink:hover {
+    text-decoration: underline;
+  }
+  

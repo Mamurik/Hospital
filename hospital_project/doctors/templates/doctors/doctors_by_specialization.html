@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Врачи по специализации: {{ specialization.name }}</title>
+  </head>
+  <body>
+    <h1>Врачи по специализации: {{ specialization.name }}</h1>
+    <ul>
+      {% for doctor in doctors %}
+      <li>{{ doctor.name }} - {{ doctor.experience_years }} лет опыта</li>
+      {% empty %}
+      <li>Нет врачей в этой специализации.</li>
+      {% endfor %}
+    </ul>
+    <a href="{% url 'doctor_list' %}">Назад к списку врачей</a>
+  </body>
+</html>
